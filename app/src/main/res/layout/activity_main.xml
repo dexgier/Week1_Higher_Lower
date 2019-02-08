@@ -7,12 +7,85 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="218dp"
+        android:layout_height="57dp"
+        android:text="textViewScore"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHighScore" />
+
+    <TextView
+        android:id="@+id/textViewHighScore"
+        android:layout_width="273dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="45dp"
+        android:text="textViewHighScore"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/textViewLastThrow"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="textViewLastThrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScore" />
+
+    <Button
+        android:id="@+id/buttonReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
+        android:text="RESET"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonHigher"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toEndOf="@+id/buttonLower"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewDice"
+        app:layout_constraintVertical_bias="1.0" />
 
+    <Button
+        android:id="@+id/buttonHigher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="HIGHER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="LOWER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLastThrow"
+        app:srcCompat="@drawable/d1" />
 </android.support.constraint.ConstraintLayout>
